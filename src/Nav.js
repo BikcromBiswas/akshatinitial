@@ -4,25 +4,50 @@ import {Link,useNavigate} from 'react-router-dom';
 const Nav = () => {
   const { loginWithRedirect ,isAuthenticated,user} = useAuth0();
   const { logout } = useAuth0();
-  return (
-    <div className="navi">
-    <div>
-      <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/stats">Stats</Link></li>
-            <li>{isAuthenticated && <p>{user.name}</p>}</li>
-            <li className="log">
-              {isAuthenticated?(<li> <button style={{backgroundColor:'#333'}}onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log out</button></li>):(<li><button style={{backgroundColor:'#333'}} onClick={() => loginWithRedirect()}>Log In</button></li>)}
-            </li>
-  
+  return (  
+    <nav className="navbar fixed-top navbar-expand-lg bg-dark-subtle">
+  <div className="container-fluid">
+    <a className="navbar-brand font-bold tect-3xl" style={{fontSize:'35px'}} href="/">chainVote</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item mx-lg-5">
+          <a className="nav-link "  style={{fontSize:'35px'}} href="/">Home</a>
+        </li>
+        <li className="nav-item mx-lg-5">
+          <a className="nav-link "style={{fontSize:'35px'}}  href="/">About</a>
+        </li>
+        <li className="nav-item mx-lg-5">
+          <a className="nav-link" style={{fontSize:'35px'}} href="/">Stats</a>
+        </li>
+        <div className=''>
+          <li className='nav-item d-flex'>{isAuthenticated && <p className='m-auto'>{user.name}</p>}</li>
+            <li className="m-auto mx-3">
+           {isAuthenticated?(<li className='d-flex '> <button className='m-auto btn btn-primary' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log out</button></li>):(<li><button onClick={() => loginWithRedirect()}>Log In</button></li>)}
+          </li>
+        </div>
       </ul>
     </div>
-    <div>
-    </div>
-   
-   
-    </div>
+  </div>
+</nav>
+    // <div className="navi">
+    // <div>
+    //   <ul>
+    //         <li><Link to="/">Home</Link></li>
+    //         <li><Link to="/about">About</Link></li>
+    //         <li><Link to="/stats">Stats</Link></li>
+    //         <li>{isAuthenticated && <p>{user.name}</p>}</li>
+    //         <li className="log">
+    //           {isAuthenticated?(<li> <button style={{backgroundColor:'blue'}}onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log out</button></li>):(<li><button onClick={() => loginWithRedirect()}>Log In</button></li>)}
+    //         </li>
+  
+    //   </ul>
+    // </div>
+    // <div>
+    // </div>
+    // </div>
   )
 }
 
