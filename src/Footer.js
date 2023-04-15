@@ -1,5 +1,4 @@
 import React from 'react'
-// HELLOW WORLD
 const Footer = () => {
   return (
     <div><footer className='foot'>

@@ -10,15 +10,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      
-     <Nav/>
-     
+        <Nav/>
       <Routes>
-      <Route exact path="/" element={<Home/>}/>
-       
-        
+        <Route exact path="/" element={<Home/>}/>
         <Route exact path="/about" element={<About/>}/>
-        
         <Route path="/stats" element={<Stats/>}/>
         </Routes>
 
