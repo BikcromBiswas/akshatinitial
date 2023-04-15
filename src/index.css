@@ -1,7 +1,7 @@
 body{
   margin:0;
   background-color: #FBEEC1;
-
+ 
 }
 header{
   display:flex;
@@ -39,6 +39,55 @@ height:150px;
 }
 .navi {
   width: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.navi ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.navi li {
+  padding: 1rem;
+}
+
+/* .navi li:hover, 
+.navi li:focus {
+  padding: 1rem;
+} */
+
+.navi li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navi li:hover, 
+.navi li:focus, 
+.navi li:hover a, 
+.navi li:focus a  {
+  background-color: #eee;
+  color: #333;
+}
+.about{
+  font-family: 'Courgette', cursive;
+  font-size: larger;
+  margin:10px;
+}
+.navi>.log>button{
+  background-color:#333 ;
+}
+/* .navi li:hover a, 
+.navi li:focus a {
+  cursor: pointer;
+} */
+
+/* .navi{
+  width: 100%;
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -67,10 +116,11 @@ height:150px;
 }
 .navi button:last-of-type{
   margin-right: 20px;
-}
+} */
 .mcont{
   display: inline-block;
   margin:40px;
+  
 }
 .cont{
   display:flex;
@@ -136,4 +186,7 @@ footer {
 .foot{
   display:flex;
   justify-content: space-evenly;
+}
+.foot>div>p:hover{
+text-decoration: underline;
 }

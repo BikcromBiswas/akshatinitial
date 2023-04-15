@@ -4,19 +4,14 @@ const Footer = () => {
   return (
     <div><footer className='foot'>
         <div>
-            <p>hello</p>
-            <p>hi</p>
-            <p>hey</p>
+            <p>Contact</p>
+            <p>Terms</p>
+            <p>Blog</p>
         </div>
         <div>
-            <p>how</p>
-            <p>are</p>
-            <p>you</p>
-        </div>
-        <div>
-            <p>I</p>
-            <p>am</p>
-            <p>fine</p>
+            <p>Privacy</p>
+            <p>Status</p>
+            <p>Docs</p>
         </div>
         </footer></div>
   )
