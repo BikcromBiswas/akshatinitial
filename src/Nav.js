@@ -7,22 +7,22 @@ const Nav = () => {
   return (  
     <nav className="navbar fixed-top navbar-expand-lg bg-dark-subtle">
   <div className="container-fluid">
-    <a className="navbar-brand font-bold tect-3xl" style={{fontSize:'35px'}} href="/">chainVote</a>
+    <Link className="navbar-brand font-bold tect-3xl" style={{fontSize:'35px'}} to="/">chainVote</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item mx-lg-5">
-          <a className="nav-link "  style={{fontSize:'35px'}} href="/">Home</a>
+          <Link className="nav-link "  style={{fontSize:'35px'}} to="/">Home</Link>
         </li>
         <li className="nav-item mx-lg-5">
-          <a className="nav-link "style={{fontSize:'35px'}}  href="/">About</a>
+          <Link className="nav-link "style={{fontSize:'35px'}}  to="/about">About</Link>
         </li>
         <li className="nav-item mx-lg-5">
-          <a className="nav-link" style={{fontSize:'35px'}} href="/">Stats</a>
+          <Link className="nav-link" style={{fontSize:'35px'}} to="/stats">Stats</Link>
         </li>
-        <div className=''>
+        <div className='d-flex'>
           <li className='nav-item d-flex'>{isAuthenticated && <p className='m-auto'>{user.name}</p>}</li>
             <li className="m-auto mx-3">
            {isAuthenticated?(<li className='d-flex '> <button className='m-auto btn btn-primary' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log out</button></li>):(<li><button onClick={() => loginWithRedirect()}>Log In</button></li>)}
